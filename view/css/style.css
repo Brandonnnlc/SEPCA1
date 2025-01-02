@@ -1,0 +1,28 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centering the container */
+    padding: 0 15px; /* Padding for small screen adjustments */
+}
+
+.promotion-container {
+    display: flex;
+    justify-content: space-between; /* Aligns children (images) side by side with space between */
+    align-items: center; /* Vertically aligns children in the middle */
+}
+
+.promotion-image {
+    flex: 1; /* Allows each image to grow and take up equal space */
+    max-width: 49%; /* Slightly less than half to account for any padding/margins */
+    height: auto; /* Maintains aspect ratio */
+    margin: 10px; /* Provides space between images */
+}
+
+@media (max-width: 768px) {
+    .promotion-container {
+        flex-direction: column; /* Stacks images vertically on smaller screens */
+    }
+    .promotion-image {
+        max-width: 100%; /* Allows each image to take full width of the container */
+        margin: 10px 0; /* Vertical margin only */
+    }
+}
