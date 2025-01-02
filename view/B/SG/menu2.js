@@ -103,6 +103,9 @@ document.write('\
                             <li><a id="retailProductLink"><i class="icon icon-coffee"></i> Retail Products</a></li>\
                         </ul>\
                     </li>\
+                     <li>\
+                        <a href="/B/' + countryPrefix + '/Promotion.html">Promotion</a>\
+                    </li>\
                 </ul>\
             </nav>\
         </div>\
