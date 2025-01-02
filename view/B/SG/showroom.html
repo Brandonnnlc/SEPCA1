@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom</title>
+    <script src="../checkCountry.js"></script>
+    <script src="../../header.js"></script>
+    <script src="menu2.js"></script>
+    <link rel="stylesheet" href="../styles.css"> <!-- Assuming there's a CSS file for styling -->
+</head>
+
+<body>
+    <div role="main" class="main">
+        <section class="page-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Showroom</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row featured-boxes login">
+                        <div class="col-md-12">
+                            <div class="featured-box featured-box-secundary default info-content">
+                                <div class="box-content">
+                                    <h4>SELECT ROOM TYPE</h4>
+                                    <select id="roomTypeSelect" class="form-control" onchange="navigateToRoomType()">
+                                        <option value="">Select a Room</option>
+                                        <option value="Gallery">Gallery</option>
+                                        <option value="Bedroom">Bedroom</option>
+                                        <option value="Bathroom">Bathroom</option>
+                                        <option value="Lounge">Lounge</option>
+                                        <option value="StorageRoom">Storage Room</option>
+                                        <option value="DisplayRoom">Display Room</option>
+                                        <option value="StudyRoom">Study Room</option>
+                                        <option value="ChildrensRoom">Children's Room</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function navigateToRoomType() {
+            var roomType = document.getElementById('roomTypeSelect').value;
+            var countryPrefix = localStorage.getItem("urlPrefix");  // Retrieve the country prefix from localStorage
+
+            var roomTypeToUrl = {
+                Gallery: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Tables%20%26%20Desks',
+                Bedroom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Beds%20%26%20Mattresses',
+                Bathroom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Bathroom',
+                Lounge: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Sofas%20%26%20Chair',
+                StorageRoom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Cabinets%20%26%20Storage',
+                DisplayRoom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Lightings',
+                StudyRoom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Study',
+                ChildrensRoom: '/B/' + countryPrefix + '/furnitureCategory.html?cat=Children'
+
+            };
+
+            if (roomType && roomTypeToUrl[roomType]) {
+                window.location.href = roomTypeToUrl[roomType];
+            }
+        }
+    </script>
+    <script src="../footer.js"></script>
+</body>
+
+</html>
