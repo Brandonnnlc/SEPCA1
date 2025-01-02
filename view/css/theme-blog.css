@@ -352,7 +352,7 @@ ul.simple-post-list {
 }
 
 ul.simple-post-list li {
-	*zoom: 1;
+	zoom: 1;
 	border-bottom: 1px dotted #E2E2E2;
 	padding: 15px 0;
 }

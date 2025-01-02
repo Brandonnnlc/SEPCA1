@@ -21,11 +21,13 @@ document.write(`
             updateWelcomeMessage();
         }
 
+        // Set dynamic links
         document.getElementById("tableDeskLink").setAttribute("href", "/B/" + countryPrefix + "/furnitureCategory.html?cat=" + encodeURIComponent("Tables & Desks"));
         document.getElementById("bedMattressLink").setAttribute("href", "/B/" + countryPrefix + "/furnitureCategory.html?cat=" + encodeURIComponent("Beds & Mattresses"));
         document.getElementById("sofaChairLink").setAttribute("href", "/B/" + countryPrefix + "/furnitureCategory.html?cat=" + encodeURIComponent("Sofas & Chair"));
         document.getElementById("cabinetStorageLink").setAttribute("href", "/B/" + countryPrefix + "/furnitureCategory.html?cat=" + encodeURIComponent("Cabinets & Storage"));
         document.getElementById("retailProductLink").setAttribute("href", "/B/" + countryPrefix + "/retailProductsCategory.html?cat=" + encodeURIComponent("All Retail Products"));
+        document.getElementById("promotionLink").setAttribute("href", "/B/" + countryPrefix + "/Promotion.html");
     }, false);
 
     function logout() {
@@ -108,6 +110,9 @@ document.write(`
                             <li><a href="/B/${countryPrefix}/furnitureCategory.html?cat=Children"><i class="icon icon-map-marker"></i> Children</a></li>
                             <li><a id="retailProductLink"><i class="icon icon-coffee"></i> Retail Products</a></li>
                         </ul>
+                    </li>
+                    <li>
+                        <a id="promotionLink"><i class="icon icon-tags"></i>Promotion</a>
                     </li>
                 </ul>
             </nav>
